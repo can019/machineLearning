@@ -1,8 +1,8 @@
 import tensorflow as tf
 
-W = tf.Variable([5.0])  # w의 초기값 :: w=5부터 경사하강 시작
-X = [1., 2., 3., 4.]  # data set
-Y = [1., 3., 5., 7.]  # label set
+W = tf.Variable([-3.0])  # w의 초기값 :: w=5부터 경사하강 시작 0 말고 아무거나 하면된다.
+X = [1., 2., 3., 4., 5]  # data set
+Y = [1., 3., 5., 7., 10]  # label set
 
 for step in range(300):  # 300번 훈련을 하겠다.
     hypothesis = W * X  # 가설
