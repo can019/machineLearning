@@ -23,5 +23,7 @@ for i in range (100000):
     w.assign_sub(learning_rate*w_grad)
     b.assign_sub(learning_rate*b_grad)
 
-    if i % 100 == 0:
+    if i % 1000 == 0:
         print("{:5}|{:10.4f}|{:10.4f}|{:10.6f}".format(i, w.numpy(), b.numpy(), cost))
+
+
