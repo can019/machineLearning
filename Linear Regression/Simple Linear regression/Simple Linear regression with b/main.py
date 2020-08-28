@@ -16,7 +16,7 @@ b = tf.Variable(1.0)
 
 learning_rate = 0.01
 
-for i in range(2000):
+for i in range(20000):
     with tf.GradientTape() as tape:  # library로 gradient 구하기
         hypothesis = w * x_data + b
         cost = tf.reduce_mean(tf.square(hypothesis-y_data))
