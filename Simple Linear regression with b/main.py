@@ -1,23 +1,30 @@
 import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
 
-W = tf.Variable([-3.0])  # w의 초기값 :: w=5부터 경사하강 시작 0 말고 아무거나 하면된다.
-X = [1., 2., 3., 4., 5]  # data set
-Y = [1., 3., 5., 7., 10]  # label set
 
-for step in range(300):  # 300번 훈련을 하겠다.
-    hypothesis = W * X  # 가설
-    cost = tf.reduce_mean(tf.square(hypothesis - Y))  # cost 정의
+x_data = [1, 2, 3, 4, 5]
+y_data = [1, 2, 3, 4, 5]
 
-    alpha = 0.01  # learning rate
-    gradient = tf.reduce_mean(tf.multiply(tf.multiply(W, X)-Y, X))  # 미분
-    descent = W - tf.multiply(alpha, gradient)  # 미분값을 토대로 w값 이동. descent에 담아놓음.
-    W.assign(descent)  # 변경된 W값 적용
-    # 13, 14 line을 합쳐 W.assign(W - tf.multiply(alpha, gradient))로 표현해도 된다.
-    # W는 텐서플로우 변수기 때문에 assign을 통하여 값을 바꿔준다.
-    if step % 10 == 0:
-        print('{:5} | {:10.4f} | {:10.6f}'.format(step, cost.numpy(), W.numpy()[0]))
-print('\n Model :: H(x) ={:10.6f}x'.format(W.numpy()[0]))
+# plt.plot(x_data, y_data, 'o')
+# plt.xlim(0, 5.3)  # x축 범위
+# plt.ylim(0, 5.3)  # y축 범위
+# plt.show()
 
-# library 함수 설명 ::
-# tf.multiply : 곱
-# tf.reduce_mean : 평균
+w = tf.Variable(3.0)
+b = tf.Variable(1.0)
+
+learning_rate = 0.01
+
+for i in range(2000):
+    with tf.GradientTape() as tape:  # library로 gradient 구하기
+        hypothesis = w * x_data + b
+        cost = tf.reduce_mean(tf.square(hypothesis-y_data))
+
+    w_grad, b_grad = tape.gradient(cost, [w,b])
+
+    w.assign_sub(learning_rate * w_grad)
+    b.assign_sub(learning_rate * b_grad)
+
+    if i % 100 == 0 :
+        print("{:5}|{:10.4f}|{:10.4f}|{:10.6f}".format(i, w.numpy(), b.numpy(), cost))
