@@ -1,13 +1,11 @@
 import tensorflow as tf
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 
 data = pd.read_csv('data.csv')
 Height = data['Height']
 Weight = data['Weight']
-print(Height)
-print(Weight)
+
 w = tf.Variable(5.0)
 b = tf.Variable(5.0)
 
@@ -26,4 +24,7 @@ for i in range (100000):
     if i % 1000 == 0:
         print("{:5}|{:10.4f}|{:10.4f}|{:10.6f}".format(i, w.numpy(), b.numpy(), cost))
 
-
+x2 = [1.4, 1.9]
+plt.scatter(Height, Weight)
+plt.plot(x2,x2*w+b, c= 'r')
+plt.show()
