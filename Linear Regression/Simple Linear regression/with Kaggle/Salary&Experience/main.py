@@ -8,7 +8,7 @@ salary = data['Salary']
 
 w = tf.Variable(2000.0)
 b = tf.Variable(500.0)
-learning_rate = 0.0001
+learning_rate = 0.00001
 for i in range(1000000):
     with tf.GradientTape() as tape:
         hypothesis = w*experience + b
