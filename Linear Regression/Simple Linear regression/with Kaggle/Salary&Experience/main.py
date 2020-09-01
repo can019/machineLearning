@@ -1,6 +1,6 @@
 import tensorflow as tf
 import pandas as pd
-
+import matplotlib.pyplot as plt
 data = pd.read_csv('Salary_Data.csv')
 data.info()
 experience = data['YearsExperience']
@@ -20,3 +20,8 @@ for i in range(100000):
 
     if i % 1000 == 0:
         print("{:5}|{:10.4f}|{:10.4f}|{:10.6f}".format(i, w.numpy(), b.numpy(), cost))
+
+x2 = [1.0, 11.0]
+plt.scatter(experience, salary)
+plt.plot(x2,x2*w+b, c= 'r')
+plt.show()
