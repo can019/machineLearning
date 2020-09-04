@@ -1,10 +1,12 @@
 import tensorflow as tf
+import itertools
 import matplotlib.pyplot as plt
-
+import numpy as np
 x1 = [73., 93., 83., 96., 73.]
 x2 = [80., 88., 91., 98., 66.]
 x3 = [75., 93., 90., 100., 70.]
 y = [152., 185., 180., 196., 142.]
+
 
 w1 = tf.Variable(tf.random.normal([1]))
 w2 = tf.Variable(tf.random.normal([1]))
