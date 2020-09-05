@@ -1,6 +1,5 @@
 import tensorflow as tf
 import numpy as np
-
 data = np.array([
     # x1  x2   x3    y
     [73., 80., 75., 152.],
@@ -34,3 +33,4 @@ for i in range(n_epochs+1):
 
         if i % 100 ==0:
             print('{:5} | {:10.4f}'.format(i,cost.numpy()))
+
