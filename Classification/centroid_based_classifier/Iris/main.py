@@ -5,8 +5,8 @@ read_iris_train_set = pd.read_csv("iris_train.csv", header=None)
 read_iris_test_set = pd.read_csv("iris_test.csv", header=None)
 
 # data info
-# read_iris_train_set.info()
-# read_iris_test_set.info()
+read_iris_train_set.info()
+read_iris_test_set.info()
 
 # convert 'DataFrame' to 'numpy'
 dataFrame_irs_train_set = read_iris_train_set[:]
@@ -14,32 +14,45 @@ dataFrame_irs_test_set = read_iris_test_set[:]
 iris_train_set = np.array(dataFrame_irs_train_set, dtype='float32')
 iris_test_set = np.array(dataFrame_irs_test_set, dtype='float32')
 
+# Calculate Uclidean distance
+# meanVector is mean of iris_train_set vector (without label)
+def cal_distance_with_meanVector(data, group_num):
+    result = np.sqrt(np.sum(np.square(mean_vector[group_num] - data[0:-1])))
+    return result
 
-count = np.zeros([3,4])
-meanVector = np.zeros([3,4])
 
+# how many items in class
+count = np.zeros([3, 4])
 
-for i in range(np.size(iris_train_set,0)):
+# get sum of vectors.
+sum_of_vector = np.zeros([3, 4])
 
+# meanVector has three group's vector. ([class1], [class2], [class3])
+# class shpae is [w, x, y, z]
+mean_vector = np.zeros([3, 4])
+
+# loop for get sun of vectors from iris_train_set
+for i in range(np.size(iris_train_set, 0)):
     if iris_train_set[i][4] == 1:
-        meanVector[0] = meanVector[0] + iris_train_set[i][0:-1]
+        sum_of_vector[0] = sum_of_vector[0] + iris_train_set[i][0:-1]
         count[0] = count[0]+1
+
     elif iris_train_set[i][4] == 2:
-        meanVector[1] = meanVector[1] + iris_train_set[i][0:-1]
+        sum_of_vector[1] = sum_of_vector[1] + iris_train_set[i][0:-1]
         count[1] = count[1] + 1
+
     elif iris_train_set[i][4] == 3:
-        meanVector[2] = meanVector[2] + iris_train_set[i][0:-1]
+        sum_of_vector[2] = sum_of_vector[2] + iris_train_set[i][0:-1]
         count[2] = count[2] + 1
 
-meanVector = meanVector/count
-distance = np.zeros([3, 1])
+# divde sum_of_vector by count to get meanVector
+mean_vector = sum_of_vector/count
 
-def cal_distance_with_meanVector(data,group_num):
-    result = np.sqrt(np.sum(np.square(meanVector[group_num] - data[0:-1])))
-    return result
+distance = np.zeros([3, 1])
 correct_count = 0
 
-for i in range(np.size(iris_test_set,0)):
+# classify iris_test_set by mean vector
+for i in range(np.size(iris_test_set, 0)):
     label = iris_test_set[i][-1]
     distance[0] = cal_distance_with_meanVector(iris_test_set[i], 0)
     distance[1] = cal_distance_with_meanVector(iris_test_set[i], 1)
@@ -48,5 +61,6 @@ for i in range(np.size(iris_test_set,0)):
     if np.argmin(distance)+1 == label:
         correct_count = correct_count+1
 
-
+# print Accuracy
+print("----------------------------------")
 print("정확도 : {:0.3f}%".format(correct_count/30*100, "."))
