@@ -1,18 +1,7 @@
 import numpy as np
-import pandas as pd
 
-read_iris_train_set = pd.read_csv("iris_train.csv", header=None)
-read_iris_test_set = pd.read_csv("iris_test.csv", header=None)
-
-# data info
-read_iris_train_set.info()
-read_iris_test_set.info()
-
-# convert 'DataFrame' to 'numpy'
-dataFrame_irs_train_set = read_iris_train_set[:]
-dataFrame_irs_test_set = read_iris_test_set[:]
-iris_train_set = np.array(dataFrame_irs_train_set, dtype='float32')
-iris_test_set = np.array(dataFrame_irs_test_set, dtype='float32')
+iris_train_set = np.loadtxt('iris_train.csv', delimiter=",")
+iris_test_set = np.loadtxt('iris_test.csv', delimiter=",")
 
 # Calculate Uclidean distance
 # meanVector is mean of iris_train_set vector (without label)
@@ -30,21 +19,19 @@ sum_of_vector = np.zeros([3, 4])
 # meanVector has three group's vector. ([class1], [class2], [class3])
 # class shpae is [w, x, y, z]
 mean_vector = np.zeros([3, 4])
-
 # loop for get sun of vectors from iris_train_set
 for i in range(np.size(iris_train_set, 0)):
-    if iris_train_set[i][4] == 1:
+    if iris_train_set[i][4] == 1.:
         sum_of_vector[0] = sum_of_vector[0] + iris_train_set[i][0:-1]
         count[0] = count[0]+1
 
-    elif iris_train_set[i][4] == 2:
+    elif iris_train_set[i][4] == 2.:
         sum_of_vector[1] = sum_of_vector[1] + iris_train_set[i][0:-1]
         count[1] = count[1] + 1
 
-    elif iris_train_set[i][4] == 3:
+    elif iris_train_set[i][4] == 3.:
         sum_of_vector[2] = sum_of_vector[2] + iris_train_set[i][0:-1]
         count[2] = count[2] + 1
-
 # divde sum_of_vector by count to get meanVector
 mean_vector = sum_of_vector/count
 
