@@ -38,7 +38,7 @@ test_data_size = np.size(iris_data_set, 0)/max_iteration_count  # k Size of one 
 # K-Cross Validation
 for iteration_count in range(max_iteration_count):
     correct_count = 0
-
+    performace_numpy = np.array([])
     # get first and last index of test_set
     first_index_of_test_set = int(iteration_count*test_data_size)
     last_index_of_test_set = int(test_data_size+iteration_count*test_data_size)
@@ -57,4 +57,8 @@ for iteration_count in range(max_iteration_count):
         if result[i] == int(test_data_set[i][-1]):
             correct_count = correct_count+1
 
-    print("{}번째 :  {}%".format(iteration_count, round(correct_count/test_data_size*100,3)))
+    performance = round(correct_count/test_data_size*100, 3)
+    print("{} :  {}%".format(iteration_count+1, performance))
+    performace_numpy = np.append(performace_numpy, round(correct_count/test_data_size*100, 3))
+
+print("평균 : {}%".format(np.mean(performace_numpy)))
