@@ -12,26 +12,28 @@ def cal_distance(test_point, train_set):
 def knn_classify(train_set, test_set, k):
     classified = np.array([], np.int32)
 
-    # test_set의 0번째 점 부터 마지막 점까지 loop를 돌며 분류
+    # classification on all points permutate
     for i in range(np.size(test_data_set, 0)):
-        distance = cal_distance(test_set[i], train_set)  # 한 점과 train_set 전체 사이 거리를 저장한 numpy
-        k_nearest_nieghbors = np.array([], np.int32)  # distance를 통해 한 점과 가장 가까운 k개 점을 저장하는 numpy
+        # Numpy stores the distance between one point and the entire train_set
+        distance = cal_distance(test_set[i], train_set)
+        # Numpy to store one point and the closest k point through an dinstance
+        k_nearest_nieghbors = np.array([], np.int32)
 
-        # 가장 가까운 k개 점을 추출 후 저장
+        # get nearest k points and store
         for j in range(k):
             target_index = np.argmin(distance)
             k_nearest_nieghbors = np.append(k_nearest_nieghbors, int(train_set[target_index][-1]))
             distance = np.delete(distance, target_index)
 
-        # line 27, 28 :: 가장 가까운 k개의 점 중 빈도수가 가장 높은 class를 추출
+        # line 27, 28 :: Extract the class with the highest frequency from the nearest k points
         bin_count = np.bincount(k_nearest_nieghbors)
         classified = np.append(classified, np.argmax(bin_count))
 
     return classified
 
 
-max_iteration_count = 5  # k-cross validation의 k에 해당
-test_data_size = np.size(iris_data_set, 0)/max_iteration_count  # k등분된 집합 하나의 크기
+max_iteration_count = 5  # k of k-cross validation
+test_data_size = np.size(iris_data_set, 0)/max_iteration_count  # k Size of one set of equalised sets
 
 # K-Cross Validation
 for iteration_count in range(max_iteration_count):
