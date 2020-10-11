@@ -20,8 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cafbca69-d90c-47c0-a3b0-40e063306e85" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../nearest neighbors classifier/iris/iris.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../nearest neighbors classifier/iris/iris.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Multiple Linear resgression/with kaggle/HousePrice/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Multiple Linear resgression/with kaggle/HousePrice/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Multiple Linear resgression/with kaggle/HousePrice/kc_house_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Multiple Linear resgression/with kaggle/HousePrice/kc_house_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/Height&amp;Weight/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/Height&amp;Weight/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/RandomNumber/Random Number.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/RandomNumber/Random Number.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/Salary&amp;Experience/Salary_Data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/Salary&amp;Experience/Salary_Data.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="SvnConfiguration">
@@ -61,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602417124077</updated>
       <workItem from="1602417125307" duration="29000" />
+      <workItem from="1602426356395" duration="18000" />
     </task>
     <servers />
   </component>
@@ -77,5 +85,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
