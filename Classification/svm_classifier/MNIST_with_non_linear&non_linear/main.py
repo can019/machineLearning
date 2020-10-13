@@ -24,10 +24,10 @@ if not os.path.isfile("./MNIST.csv"):
         x_cursor = train_file.read(784)
         y_cursor = label_file.read(1)
 
-        temp_x = list(struct.unpack(len(x_cursor) * 'B', x_cursor))
-        temp_y = list(struct.unpack(len(y_cursor) * 'B', y_cursor))
-        temp_y.extend(temp_x)
-        writer.writerow(temp_y)
+        temp_x = list(struct.unpack(len(x_cursor) * 'B', x_cursor))  # byte->int, list형으로 저장
+        temp_y = list(struct.unpack(len(y_cursor) * 'B', y_cursor))  # byte->int, list형으로 저장
+        temp_y.extend(temp_x)  # 합치기
+        writer.writerow(temp_y)  #csv에 작성
 
     csv_file.close()
     label_file.close()
