@@ -7,37 +7,43 @@ import os
 import pandas as pd
 import numpy as np
 import time
+import csv
 
-# line 12 ~ 30 :: ubyte to csv
+# line 13 ~ 34 :: ubyte to csv
 if not os.path.isfile("./MNIST.csv"):
-    fp_image = open('train-images.idx3-ubyte','rb')
-    fp_label = open('train-labels.idx1-ubyte','rb')
-    csv_file = open("MNIST.csv",'w',encoding="utf-8")
 
-    mag, lbl_count = struct.unpack(">II", fp_label.read(8))  # unsigned int *2로
-    mag, img_count = struct.unpack(">II", fp_image.read(8))
-    rows, cols = struct.unpack(">II", fp_image.read(8))
-    pixels = rows*cols
-    res = []
-    for idx in range(lbl_count):
-        label = struct.unpack("B", fp_label.read(1))[0]
-        bdata = fp_image.read(pixels)
-        sdata = list(map(lambda n: str(n), bdata))
-        csv_file.write(str(label) + ",")
-        csv_file.write(",".join(sdata) + "\r\n")
+    train_file = open('train-images.idx3-ubyte', 'rb')
+    label_file = open('train-labels.idx1-ubyte', 'rb')
+    csv_file = open("MNIST.csv", 'w', encoding="utf-8")
+
+    train_file_size = os.path.getsize("train-labels.idx1-ubyte")  # label 수와 x 데이터 수가 같기에 한번만 size check
+    writer = csv.writer(csv_file)
+    writer.writerow(np.zeros(785).tolist())  # pandas를 위한 더미 행 추가
+    x_cursor, y_cursor = train_file.read(16), label_file.read(8)  # cusor 옮겨놓기
+    for i in range((train_file_size-8)):
+        x_cursor = train_file.read(784)
+        y_cursor = label_file.read(1)
+
+        temp_x = list(struct.unpack(len(x_cursor) * 'B', x_cursor))
+        temp_y = list(struct.unpack(len(y_cursor) * 'B', y_cursor))
+        temp_y.extend(temp_x)
+        writer.writerow(temp_y)
+
     csv_file.close()
-    fp_label.close()
-    fp_image.close()
+    label_file.close()
+    train_file.close()
 
 # read data
 # pandas로 읽은 후 numpy로 변환하는 것이 numpy로 바로 읽는 것보다 7초 이상 빨랐습니다.
 read_MNIST = pd.read_csv("MNIST.csv")  # pandas로 읽음
+# read_MNIST.info()
+# print(read_MNIST)
 np_MNIST = read_MNIST.to_numpy()  # numpy로 변환
 
 # slice data
 X = np_MNIST[:, 1:]
 Y = np_MNIST[:, 0]
-# print(np.shape(X))  # -> 59999
+# print(np.shape(X))  # -> 60000
 
 # scaling
 X_255 = X/255
