@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fa5aec-0cdd-4c71-8752-086eb4bbaacf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_train.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../nearest neighbors classifier/iris/iris.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../nearest neighbors classifier/iris/iris.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../svm_classifier/MNIST_with_non_linear&amp;non_linear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../svm_classifier/MNIST_with_non_linear&amp;non_linear/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Multiple Linear resgression/with kaggle/HousePrice/kc_house_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Multiple Linear resgression/with kaggle/HousePrice/kc_house_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/Height&amp;Weight/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/Height&amp;Weight/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/RandomNumber/Random Number.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/RandomNumber/Random Number.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/Salary&amp;Experience/Salary_Data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Linear Regression/Simple Linear regression/with Kaggle/Salary&amp;Experience/Salary_Data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K-means_test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../K-means_test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Make_blobs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Make_blobs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="SvnConfiguration">
@@ -67,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602685767151</updated>
       <workItem from="1602685768374" duration="324000" />
+      <workItem from="1602687403830" duration="87000" />
     </task>
     <servers />
   </component>
@@ -83,6 +81,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="259" y="264" key="FileChooserDialogImpl" timestamp="1602686081002">
