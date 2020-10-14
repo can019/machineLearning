@@ -22,7 +22,6 @@
     <list default="true" id="e8fa5aec-0cdd-4c71-8752-086eb4bbaacf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../K-means_test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../K-means_test/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Make_blobs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Make_blobs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602685767151</updated>
       <workItem from="1602685768374" duration="324000" />
-      <workItem from="1602687403830" duration="162000" />
+      <workItem from="1602687403830" duration="205000" />
     </task>
     <servers />
   </component>
