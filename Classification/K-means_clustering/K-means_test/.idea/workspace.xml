@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44db9fa2-23c8-4dd6-a2d9-ee03f61fd4c3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Test_by_changing_conditions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_by_changing_conditions/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_test.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_train.csv" afterDir="false" />
@@ -59,6 +57,35 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="K-means_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -69,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602686094447</updated>
-      <workItem from="1602686095542" duration="315000" />
+      <workItem from="1602686095542" duration="378000" />
     </task>
     <servers />
   </component>
@@ -86,5 +113,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="914" height="475" key="GridCell.Tab.0.bottom" timestamp="1602686476389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="475" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602686476389" />
+    <state width="914" height="475" key="GridCell.Tab.0.center" timestamp="1602686476389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="475" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602686476389" />
+    <state width="914" height="475" key="GridCell.Tab.0.left" timestamp="1602686476389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="475" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602686476389" />
+    <state width="914" height="475" key="GridCell.Tab.0.right" timestamp="1602686476389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="475" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602686476389" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/K_means_test$main.coverage" NAME="main Coverage Results" MODIFIED="1602686435082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

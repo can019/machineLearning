@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fa5aec-0cdd-4c71-8752-086eb4bbaacf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_test.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../centroid_based_classifier/Iris/iris_train.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../nearest neighbors classifier/iris/iris.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../nearest neighbors classifier/iris/iris.csv" afterDir="false" />
@@ -68,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602685767151</updated>
-      <workItem from="1602685768374" duration="229000" />
+      <workItem from="1602685768374" duration="324000" />
     </task>
     <servers />
   </component>
@@ -85,5 +83,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="259" y="264" key="FileChooserDialogImpl" timestamp="1602686081002">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="259" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602686081002" />
   </component>
 </project>
