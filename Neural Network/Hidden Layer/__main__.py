@@ -12,7 +12,7 @@ def unzip(src, dst):
         print("fatal :: {}가 존재하지 않습니다.".format(src))
         return 0
     print("  -----------------------------------  ")
-    print("압축 해제 시작 :: src = {}".format(dst))
+    print("  압축 해제 시작 :: src = {}".format(dst))
     input = gzip.GzipFile(src, 'rb')
     s = input.read()
     input.close()
@@ -83,15 +83,15 @@ def pre_processing():
     # One-Hot Encoding
     after_one_hot_encoding = one_hot_encoding(mixed_data, target_labels)
 
-    print("-----------------------------------")
-    print("train set, test set 분리 시작")
+    print("  -----------------------------------")
+    print("  train set, test set 분리 시작")
     X = mixed_data[:, 1:]
     total_data_size = np.size(X,axis=0)
     train_X = X[:int(total_data_size*0.6), :]
     test_X = X[int(total_data_size*0.6):, :]
     train_label = after_one_hot_encoding[:, :int(total_data_size*0.6), :]
     test_label = after_one_hot_encoding[:, int(total_data_size*0.6), :]
-    print("train set, test set 분리 끝")
+    print("  train set, test set 분리 끝")
 
     end_pre_processing = time.perf_counter()
     print("  -----------------------------------")
@@ -101,8 +101,8 @@ def pre_processing():
     return train_X, test_X, train_label, test_label
 
 def one_hot_encoding(src, labels):
-    print("-----------------------------------")
-    print("One-Hot Encoding 시작")
+    print("  -----------------------------------")
+    print("  One-Hot Encoding 시작")
     dst = np.empty([np.size(labels)-1, np.size(src, axis=0), np.size(labels)])
     for i in range(np.size(labels)-1):
         temp = np.zeros([np.size(src, axis=0), np.size(labels)])
@@ -110,12 +110,12 @@ def one_hot_encoding(src, labels):
             if src[j][0] == labels[i]:
                 temp[j][i] = 1
         dst[i] = temp
-    print("One-Hot Encoding 끝")
+    print("  One-Hot Encoding 끝")
     return dst
 
 def slice_by_target_label(src, target):
-    print("-----------------------------------")
-    print("특정 label에 따른 dataset 채택 시작")
+    print("  -----------------------------------")
+    print("  특정 label에 따른 dataset 채택 시작")
     dst = src[src[:, 0] == target[0]]
     for i in range(1, np.size(target)):
         temp = src[src[:, 0] == target[i]]
